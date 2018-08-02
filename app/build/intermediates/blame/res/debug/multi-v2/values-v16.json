@@ -4,7 +4,17 @@
             "outputFile": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha3.aar/8816e341d467c11e4c729880c6f097cd/res/values-v16/values-v16.xml",
+                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha3.aar/b6b2e2dca0961a9614f8e94c68a0da7b/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                },
+                {
+                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha3.aar/75d7a4dff1fec531b5675b9efb896de1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -20,16 +30,6 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
-                    }
-                },
-                {
-                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha3.aar/4f8bf07eba74f45b7a9583222537f368/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
                     }
                 }
             ]

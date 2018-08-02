@@ -4,7 +4,24 @@
             "outputFile": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml",
             "map": [
                 {
-                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha3.aar/8816e341d467c11e4c729880c6f097cd/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha3.aar/b6b2e2dca0961a9614f8e94c68a0da7b/res/values-en-rAU/values-en-rAU.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "51",
+                        "startColumns": "4",
+                        "startOffsets": "4862",
+                        "endColumns": "100",
+                        "endOffsets": "4958"
+                    }
+                },
+                {
+                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha3.aar/75d7a4dff1fec531b5675b9efb896de1/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-28.0.0-alpha3.aar/7f785c24d611d3783bace24cb055cbaf/res/values-en-rAU/values-en-rAU.xml",
+                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-28.0.0-alpha3.aar/60a3d54362f14f9f5c57da43b047ad4c/res/values-en-rAU/values-en-rAU.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -35,23 +52,6 @@
                         "startOffsets": "2764,2864,2970,3078,3190,3285,3368,3460,3562,3658,3754,3848,3940,4047,4155,4239,4321,4403,4501,4600,4686",
                         "endColumns": "99,105,107,111,94,82,91,101,95,95,93,91,106,107,83,81,81,97,98,85,93",
                         "endOffsets": "2859,2965,3073,3185,3280,3363,3455,3557,3653,3749,3843,3935,4042,4150,4234,4316,4398,4496,4595,4681,4775"
-                    }
-                },
-                {
-                    "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha3.aar/4f8bf07eba74f45b7a9583222537f368/res/values-en-rAU/values-en-rAU.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "51",
-                        "startColumns": "4",
-                        "startOffsets": "4862",
-                        "endColumns": "100",
-                        "endOffsets": "4958"
                     }
                 }
             ]

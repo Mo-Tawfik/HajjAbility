@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">HajjAbility</string>
+    <string name="chair_command">chair</string>
+    <string name="voice_command">voice</string>
 </resources>

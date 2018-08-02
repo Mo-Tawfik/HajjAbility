@@ -69,7 +69,7 @@ public class speech extends AppCompatActivity implements View.OnClickListener, O
 
     void startTranscribing() {
         Log.d(TAG, "Starting to listen");
-        final CountryPicker picker = CountryPicker.newInstance("Select Country");  // dialog title
+        final CountryPicker picker = CountryPicker.newInstance("Select Laguage by Country Dialect ");  // dialog title
         picker.setListener(new CountryPickerListener() {
             @Override
             public void onSelectCountry(String name, String code, String dialCode, int flagDrawableResID) {
@@ -161,6 +161,7 @@ public class speech extends AppCompatActivity implements View.OnClickListener, O
         } else {
             Toast.makeText(this, "Please enable voice commands to use this feature", Toast.LENGTH_LONG).show();
             Log.d(TAG, "Permission not given");
+
         }
     }
 }

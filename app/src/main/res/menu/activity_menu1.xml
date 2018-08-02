@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/chair"
+        android:actionLayout="@android:color/transparent"
+        android:icon="@drawable/wheelchair"
+        android:title="Order a Wheel Chair" />
+    <item
+        android:id="@+id/volunteer"
+        android:icon="@drawable/wheelchair"
+        android:title="Request a Volunteer" />
+    <item
+        android:id="@+id/speech"
+        android:icon="@drawable/wheelchair"
+        android:title="Talk For Me" />
+    <item
+        android:id="@+id/guide"
+        android:icon="@drawable/wheelchair"
+        android:title="Online Guide" />
+    <item
+        android:id="@+id/live"
+        android:icon="@drawable/wheelchair"
+        android:title="Live Sheikh" />
+    <item
+        android:id="@+id/manasek"
+        android:icon="@drawable/wheelchair"
+        android:title="Manasek Guide" />
+
+</menu>

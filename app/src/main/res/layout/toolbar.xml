@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@android:color/background_light"
+    android:hapticFeedbackEnabled="false"
+    android:textAlignment="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/toolbar"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="40dp"
+            android:layout_height="27dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/menu" />
+
+        <TextView
+            android:id="@+id/textView_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/buenard"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="@color/mygrey"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/home"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/settings"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/settings"
+            android:onClick="onClick" />
+
+        <Button
+            android:id="@+id/logoff"
+            android:layout_width="20dp"
+            android:layout_height="22dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/logoff"
+            android:onClick="onClick" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

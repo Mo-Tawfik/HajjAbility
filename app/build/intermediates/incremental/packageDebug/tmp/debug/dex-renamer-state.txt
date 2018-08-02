@@ -1,0 +1,4 @@
+#Thu Aug 02 17:27:40 AST 2018
+base.0=/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

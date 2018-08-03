@@ -52,7 +52,8 @@ public class volunteer extends AppCompatActivity {
     LocationListener locationListener;
     String current_location;
     TextToSpeech t1;
-    Boolean flag = true;
+    SpeechListener2 s2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,8 @@ public class volunteer extends AppCompatActivity {
                 }
             }
         });
+        s2 = new SpeechListener2(this);
+        t1.setOnUtteranceProgressListener(s2);
         /////////////////////////////////////////////////////////////////
         locationManager = (LocationManager) this.getSystemService(LOCATION_SERVICE);
         locationListener = new LocationListener() {
@@ -129,7 +132,7 @@ public class volunteer extends AppCompatActivity {
                     @Override
                     public void onSuccess(Void aVoid) {
                         Log.d("gazar", "DocumentSnapshot successfully written!");
-                        if (flag)
+                        if (home.shouldUseVoice)
                             t1.speak("your request has been issued", TextToSpeech.QUEUE_FLUSH, null, "request_done");
 
                         hello.setText("Your request has been issued");

@@ -1,6 +1,7 @@
 package com.example.home.hajjability;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.speech.RecognizerIntent;
@@ -14,7 +15,9 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -29,12 +32,16 @@ public class home extends AppCompatActivity implements View.OnClickListener {
     Button speak;
     TextToSpeech t1;
     SpeechListener s1;
+    Switch s;
+    public static Boolean shouldUseVoice = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         s1 = new SpeechListener(this);
+        s = findViewById(R.id.switch1);
+        shouldUseVoice = s.isChecked();
 
         TextView bar;
         bar = (TextView) findViewById(R.id.textView_toolbar);
@@ -57,8 +64,8 @@ public class home extends AppCompatActivity implements View.OnClickListener {
                     t1.setLanguage(Locale.getDefault());
                   //   Log.d("gazar", "Setting listener");
                     //        t1.setOnUtteranceProgressListener(s1);
-
-                    t1.speak("For ordering a wheelchair, say wheelchair. " +
+                    if(home.shouldUseVoice)
+                        t1.speak("For ordering a wheelchair, say wheelchair. " +
                             "For requesting a volunteer, say help." +
                             "For contacting with a sheikh, say fatwa", TextToSpeech.QUEUE_FLUSH, null, "instructions");
                 }
@@ -67,7 +74,15 @@ public class home extends AppCompatActivity implements View.OnClickListener {
         });
         Log.d("gazar", "Setting listener");
         t1.setOnUtteranceProgressListener(s1);
-
+        s.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                shouldUseVoice = isChecked;
+                if(home.shouldUseVoice)
+                    t1.speak("For ordering a wheelchair, say wheelchair. " +
+                            "For requesting a volunteer, say help." +
+                            "For contacting with a sheikh, say fatwa", TextToSpeech.QUEUE_FLUSH, null, "instructions");
+            }
+        });
         //t1.speak("For ordering a wheelchair, say wheelchair. ", TextToSpeech.QUEUE_FLUSH, null);
       //  startVoiceRecognitionActivity();
     }

@@ -2,12 +2,14 @@ package com.example.home.hajjability;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,13 +19,24 @@ import com.vikramezhil.droidspeech.OnDSPermissionsListener;
 import com.ybs.countrypicker.CountryPicker;
 import com.ybs.countrypicker.CountryPickerListener;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class speech extends AppCompatActivity implements View.OnClickListener, OnDSListener, OnDSPermissionsListener {
     public final String TAG = "DroidSpeech";
     DroidSpeech droidSpeech;
     Button transcribe_btn;
     List<String> supportedSpeechLanguages;
+
+    TextToSpeech t1;
+    EditText ed1;
+    Button b1, b2;
+
+
+    String arabicLetters;
+    String englishLetters;
+    ArrayList<String> englistLettersArray = new ArrayList<>();
 
     @Override
     protected void onDestroy() {
@@ -43,7 +56,80 @@ public class speech extends AppCompatActivity implements View.OnClickListener, O
         new navbar().create((DrawerLayout) this.findViewById(R.id.drawer_layout), speech.this);
 
         setupDroidSpeech();
+
+        setupTextToSpeech();
     }
+
+    void setupTextToSpeech() {
+
+        ed1 = (EditText) findViewById(R.id.my_editText);
+        b1 =(Button)findViewById(R.id.button);
+        b2 = (Button)findViewById(R.id.button2);
+
+        b1.setOnClickListener(this);
+        b2.setOnClickListener(this);
+
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status!=TextToSpeech.ERROR)
+                {
+                    t1.setLanguage(Locale.US);
+                }
+
+            }
+        });
+    }
+
+    public String toFranko(String ArabicText)
+    {
+        String EnglishText = null;
+
+        String transWord = "";
+        // Change inputted Arabic text to English letters
+        arabicLetters = "ءاأبتثجحخدذرزسشصضطظعغفقكلمنهويةئه";
+        englishLetters = new StringBuilder("aaaywhnmlkkfgaztdssszrzdahgstbaaa").reverse().toString();
+
+
+        ///////////////////////////////////////////
+        if (ArabicText.isEmpty() == false) {
+            englistLettersArray.clear();
+            String phase = ArabicText;
+            String[] splited = phase.split("\\s+");
+            for (String splited1 : splited) {    // loop across this array of strings
+                for (int x = 0; x < splited1.length(); x++) {   // for a single string loop through its characters
+                    String lett = String.valueOf(splited1.charAt(x));
+                    if (arabicLetters.contains(lett)) {
+                        int index = arabicLetters.indexOf(lett);    // identify the place of this character
+                        String engLet = String.valueOf(englishLetters.charAt(index));
+                        englistLettersArray.add(engLet);
+                    }
+                }
+                englistLettersArray.add("");
+            }
+            for (int x = 0; x < englistLettersArray.size(); x++) {
+                String letter = englistLettersArray.get(x).toString();
+                if (letter.equals("")) {
+                    transWord = transWord + " " + letter;
+                } else {
+                    transWord = transWord + letter;
+                }
+            }
+        }
+
+        ////////////////////////////////////////////
+        return transWord;
+    }
+
+    public void onPause()
+    {
+        super.onPause();
+        if (t1 != null) {
+            t1.stop();
+            t1.shutdown();
+        }
+    }
+
 
     @Override
     public void onClick(View v) {
@@ -63,6 +149,24 @@ public class speech extends AppCompatActivity implements View.OnClickListener, O
                 Intent int3 = new Intent(this, login.class);
                 startActivity(int3);
                 break;
+
+            case R.id.button:   // English
+            {
+                String toSpeak = ed1.getText().toString();
+                Toast.makeText(getApplicationContext(), toSpeak, Toast.LENGTH_SHORT).show();
+                t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+            }
+            break;
+
+            case R.id.button2:     // Arabic
+            {
+                Toast.makeText(getApplicationContext(), "amaaaarrrr", Toast.LENGTH_SHORT).show();
+                String toSpeak = ed1.getText().toString();
+                String franko= toFranko(toSpeak);
+                Toast.makeText(getApplicationContext(), franko, Toast.LENGTH_SHORT).show();
+                t1.speak(franko, TextToSpeech.QUEUE_FLUSH, null);
+            }
+            break;
 
         }
     }

@@ -122,8 +122,6 @@ public class login extends AppCompatActivity  implements View.OnClickListener {
         }
     }
 
-    public void voiceAssist(String query) {
 
-    }
 
 }

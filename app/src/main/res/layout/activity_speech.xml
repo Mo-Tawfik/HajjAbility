@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".speech"
     android:background="@drawable/peachlight">
 
 
@@ -24,6 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="55dp" />
 
+
+
         <Button
             android:id="@+id/start_transcribe"
             android:layout_width="match_parent"
@@ -33,6 +36,42 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/my_editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/buenard"
+            android:hint="Type something"
+            app:layout_constraintBottom_toBottomOf="@+id/button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:text="English"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/my_editText"
+            android:drawableTop="@drawable/usa"
+            android:background="@android:color/transparent"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="Arabic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_editText"
+            android:drawableTop="@drawable/egypt"
+            android:background="@android:color/transparent"
+            />
 
 
     </LinearLayout>

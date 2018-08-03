@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">hajj_hackathon</string>
+    <string name="chair_command">كرسي</string>
+    <string name="volunteer_command">متطوع</string>
+    <string name="help_command">مساعدة</string>
+    <string name="wheel_command">متحرك</string>
+</resources>

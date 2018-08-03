@@ -1,12 +1,12 @@
 package com.example.home.hajjability;
 
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -35,9 +35,10 @@ import com.google.firebase.firestore.SetOptions;
 import org.w3c.dom.Text;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
-public class chair extends AppCompatActivity implements View.OnClickListener {
+public class chair extends AppCompatActivity {
 
     FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseUser user = auth.getCurrentUser();
@@ -50,6 +51,8 @@ public class chair extends AppCompatActivity implements View.OnClickListener {
     LocationManager locationManager;
     LocationListener locationListener;
     String current_location;
+    TextToSpeech t1;
+    Boolean flag = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +61,18 @@ public class chair extends AppCompatActivity implements View.OnClickListener {
         //FirebaseApp.initializeApp(this);
         email = "habibayassin@aucegypt.edu";
         password = "hello1234";
+        hello = (TextView) findViewById(R.id.text);
 
+        //////////////////////////////////////////////////////////
+        t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                if(i != TextToSpeech.ERROR)
+                {
+                    t1.setLanguage(Locale.getDefault());
+                }
+            }
+        });
         /////////////////////////////////////////////////////////////////
         locationManager = (LocationManager) this.getSystemService(LOCATION_SERVICE);
         locationListener = new LocationListener() {
@@ -103,21 +117,29 @@ public class chair extends AppCompatActivity implements View.OnClickListener {
 
         //sign_up();
         user_id  = user.getUid();
-        //add_user();
 
-        //sign_in();
+        Map<String, Object> user = new HashMap<>();
+        user.put("current_location", current_location);
 
-        /*auth.sendSignInLinkToEmail(email, actionCodeSettings)
-                .addOnCompleteListener(new OnCompleteListener() {
+
+        db.collection("users").document(user_id)
+                .set(user, SetOptions.merge())
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onComplete(@NonNull Task task) {
-                        if (task.isSuccessful()) {
-                            Log.d("gazar", "Email sent.");
-                        }
+                    public void onSuccess(Void aVoid) {
+                        Log.d("gazar", "DocumentSnapshot successfully written!");
+                        if (flag)
+                            t1.speak("your request has been issued", TextToSpeech.QUEUE_FLUSH, null, "request_done");
+
+                        hello.setText("Your request has been issued");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("gazar", "Error writing document", e);
                     }
                 });
-        verify();
-        add_user();*/
     }
 
     @Override
@@ -181,6 +203,16 @@ public class chair extends AppCompatActivity implements View.OnClickListener {
                     }
                 });
 
+    }
+
+    public void onPause()
+    {
+        if(t1 != null)
+        {
+            t1.stop();
+            t1.shutdown();
+        }
+        super.onPause();
     }
 
     private void action()
@@ -286,42 +318,5 @@ public class chair extends AppCompatActivity implements View.OnClickListener {
                     }
                 });
     }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.send:
-                //add to database
-                Map<String, Object> user = new HashMap<>();
-                user.put("current_location", current_location);
-                /*user.put("name", name);
-                user.put("blood_type", blood_type);
-                user.put("allergies", allergies);
-                user.put("disability", disability);
-                user.put("birthdate", birthdate);
-                user.put("emergency_contact_1", emergency_contact_1);
-                user.put("emergency_contact_2", emergency_contact_2);
-                user.put("vaccination", vaccination);
-                user.put("meds", meds);
-                user.put("location",location);*/
-
-                db.collection("users").document(user_id)
-                        .set(user, SetOptions.merge())
-                        .addOnSuccessListener(new OnSuccessListener<Void>() {
-                            @Override
-                            public void onSuccess(Void aVoid) {
-                                Log.d("gazar", "DocumentSnapshot successfully written!");
-                            }
-                        })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Log.w("gazar", "Error writing document", e);
-                            }
-                        });
-                //Intent int1 = new Intent(this, Main2Activity.class);
-                //startActivity(int1);
-                break;
-        }
-    }
 }
+

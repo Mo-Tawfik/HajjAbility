@@ -2,5 +2,7 @@
 <resources>
     <string name="app_name">HajjAbility</string>
     <string name="chair_command">chair</string>
-    <string name="voice_command">voice</string>
+    <string name="volunteer_command">volunteer</string>
+    <string name="help_command">help</string>
+    <string name="wheel_command">wheel</string>
 </resources>

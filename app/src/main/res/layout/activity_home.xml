@@ -44,7 +44,7 @@
                 android:layout_height="29dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="Saudi Arabia"
+                android:text="Choose "
                 android:textColor="@android:color/background_dark" />
 
             <Button

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/peachlight"
+    tools:context=".signup">
+
+
+
+    <TextView
+        android:id="@+id/register_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/buenard"
+        android:text="Register For An Account"
+        android:textColor="#002157"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/name_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="30dp"/>
+
+    <EditText
+        android:id="@+id/name_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="email"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/email_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/email_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="name"
+        android:scrollHorizontally="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/password_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/password_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="bloodtype"
+        android:password="true"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/confirmpassword_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/confirmpassword_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="allergies"
+        android:password="true"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/mobilenumber_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/mobilenumber_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="disability"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/address_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmpassword_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/address_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="birthdate"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/birthdate_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobilenumber_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+
+    <EditText
+        android:id="@+id/birthdate_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="emergencyContact1"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/em1_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/em1_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="emergencyContact2"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/em2_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthdate_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+
+    <EditText
+        android:id="@+id/em2_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="vaccination"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/vaccination_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/em1_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/vaccination_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="medications"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/meds_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/em2_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/meds_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="location"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/location_tv"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vaccination_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <EditText
+        android:id="@+id/location_tv"
+        android:layout_width="200dp"
+        android:layout_height="25dp"
+        android:background="@drawable/border"
+        android:hint="password"
+        android:scrollHorizontally="true"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/meds_tv"
+        android:layout_marginBottom="10dp"/>
+
+
+    <!--<EditText-->
+    <!--android:id="@+id/pass_tv"-->
+    <!--android:layout_width="200dp"-->
+    <!--android:layout_height="25dp"-->
+    <!--android:background="@drawable/country"-->
+    <!--android:hint="password"-->
+    <!--android:scrollHorizontally="true"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textStyle="italic"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/back"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/location_tv"-->
+    <!--/>-->
+
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/next"
+        app:layout_constraintTop_toBottomOf="@+id/location_tv"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/back"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/location_tv"
+        android:layout_marginTop="10dp"/>
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -13,14 +13,14 @@
         android:background="@drawable/bg"
         android:orientation="vertical">
 
-        <TextView
+        <ImageView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="30dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="LOGO"
-            android:textSize="36sp" />
+            android:src="@drawable/logo1" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"

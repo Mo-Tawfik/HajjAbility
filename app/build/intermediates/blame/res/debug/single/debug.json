@@ -644,6 +644,10 @@
         "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/country-picker-android-1.0.aar/fecfb9e52395586e1d16e8ed8c2f5f85/res/drawable/flag_cl.png"
     },
     {
+        "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable_border.png.flat",
+        "source": "/Users/MTawfik/Downloads/HajjAbility/app/src/main/res/drawable/border.png"
+    },
+    {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable_flag_cz.png.flat",
         "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/country-picker-android-1.0.aar/fecfb9e52395586e1d16e8ed8c2f5f85/res/drawable/flag_cz.png"
     },
@@ -1854,6 +1858,10 @@
     {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_ic_mr_button_connected_25_light.png.flat",
         "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-28.0.0-alpha3.aar/60a3d54362f14f9f5c57da43b047ad4c/res/drawable-xhdpi-v4/ic_mr_button_connected_25_light.png"
+    },
+    {
+        "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable_logo1.png.flat",
+        "source": "/Users/MTawfik/Downloads/HajjAbility/app/src/main/res/drawable/logo1.png"
     },
     {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_track_mtrl_alpha.9.png.flat",
@@ -3112,12 +3120,20 @@
         "source": "/Users/MTawfik/Downloads/HajjAbility/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
+        "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/layout_signup.xml.flat",
+        "source": "/Users/MTawfik/Downloads/HajjAbility/app/src/main/res/layout/signup.xml"
+    },
+    {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_ic_audiotrack_light.png.flat",
         "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-28.0.0-alpha3.aar/60a3d54362f14f9f5c57da43b047ad4c/res/drawable-mdpi-v4/ic_audiotrack_light.png"
     },
     {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha3.aar/75d7a4dff1fec531b5675b9efb896de1/res/drawable-xxxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable_back.png.flat",
+        "source": "/Users/MTawfik/Downloads/HajjAbility/app/src/main/res/drawable/back.png"
     },
     {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable_flag_cn.png.flat",
@@ -3730,6 +3746,10 @@
     {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connected_02_light.png.flat",
         "source": "/Users/MTawfik/.gradle/caches/transforms-1/files-1.1/mediarouter-v7-28.0.0-alpha3.aar/60a3d54362f14f9f5c57da43b047ad4c/res/drawable-xxhdpi-v4/ic_mr_button_connected_02_light.png"
+    },
+    {
+        "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable_next.png.flat",
+        "source": "/Users/MTawfik/Downloads/HajjAbility/app/src/main/res/drawable/next.png"
     },
     {
         "merged": "/Users/MTawfik/Downloads/HajjAbility/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_ic_mr_button_connected_08_light.png.flat",

@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center_vertical|center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,21 +27,24 @@
             android:layout_height="55dp" />
 
 
-
         <Button
             android:id="@+id/start_transcribe"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_weight="1"
             android:text="Start Transcribing"
             android:textColorLink="@color/myblue"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/my_editText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/buenard"
             android:hint="Type something"
             app:layout_constraintBottom_toBottomOf="@+id/button"
@@ -48,33 +52,43 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="parent" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:text="English"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/button2"
-            app:layout_constraintTop_toBottomOf="@+id/my_editText"
-            android:drawableTop="@drawable/usa"
-            android:background="@android:color/transparent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="Arabic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/button"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/my_editText"
-            android:drawableTop="@drawable/egypt"
-            android:background="@android:color/transparent"
-            />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="60dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/usa"
+                android:text="English"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/button2"
+                app:layout_constraintTop_toBottomOf="@+id/my_editText" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/egypt"
+                android:text="Arabic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/button"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_editText" />
+        </LinearLayout>
 
 
     </LinearLayout>
+
+
 
 
     <android.support.design.widget.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
